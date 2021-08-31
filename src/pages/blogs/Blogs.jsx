@@ -9,10 +9,14 @@ export default function Blogs() {
     return (
         <>
 
-            <Heading /> 
+            <Heading />
+
+            
             {post.map((item) => {
-                return <BlogItem key={item.id} title={item.title} des={item.body} id={item.id} />
+                return (<BlogItem key={item.id} ke={item.id} title={item.title} des={item.body}/>)
             })}
+        
+            
 
         </>
     )
