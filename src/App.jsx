@@ -1,10 +1,10 @@
 import React from 'react'
-import { Route } from 'react-router'
+import Router from './Router';
 
 export default function App() {
     return (
         <>
-            <Route />
+           <Router />
         </>
     )
 }
