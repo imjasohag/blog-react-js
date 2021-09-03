@@ -3,26 +3,27 @@ import { useParams } from 'react-router-dom'
 import posts from '../../posts.json'
 
 export default function BlogItems() {
-    const {id}=useParams()
-    const [blog,setBlog]=useState({
-        title:'',
-        body:''
+    const { id } = useParams()
+    const [blog, setBlog] = useState({
+        title: '',
+        body: ''
     })
-    useEffect(()=>{
-        const arr = posts.filter(item=>{
-           if(item.id==id){
-                return true;
-           }else{
-                return false;
-           }
-       }) 
-       console.log(arr);
-       
-       if(arr.length>0){
-           setBlog(arr[0])
-       } 
 
-    },[])
+    useEffect(() => {
+        const arr = posts.filter(item => {
+            if (item.id == id) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        console.log(arr);
+
+        if (arr.length > 0) {
+            setBlog(arr[0])
+        }
+
+    }, [])
 
     return (
         <>

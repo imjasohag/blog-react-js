@@ -4,9 +4,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Blogs from './pages/blogs/Blogs';
 import BlogItems from './pages/blogs/BlogItems';
+import TestUseEffect from './pages/TestUseEffect';
 
 
-export default function Router () {
+export default function Router() {
     return (
         <>
             <BrowserRouter>
@@ -15,6 +16,8 @@ export default function Router () {
                     <Route exact path='/about' component={About}></Route>
                     <Route exact path='/blog' component={Blogs}></Route>
                     <Route path='/details/:id' component={BlogItems}></Route>
+                    <Route path='/effect' component={TestUseEffect}></Route>
+
                 </Switch>
             </BrowserRouter>
         </>
